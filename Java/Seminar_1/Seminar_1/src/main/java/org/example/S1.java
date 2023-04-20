@@ -13,7 +13,7 @@ public class S1 {
         int n = mostSignificantBit(i);
         System.out.printf("Task 2. MSB - n = %d\n", n);
 
-        int[] m1 = multiplesNumbers(i, n);
+        int[] m1 = multipleNumbers(i, n);
         System.out.printf("Task 3. Numbers multiple of %d from %d to %d are: ", n, i, Short.MAX_VALUE);
         for (int j = 0; j<m1.length; j++){
             if (j == m1.length-1) System.out.printf("%d.\n", m1[j]);
@@ -21,15 +21,13 @@ public class S1 {
             else if (j == 3) System.out.print(" ... ");
         }
 
-        int[] m2 = nonMultiplesNumbers(i, n);
+        int[] m2 = nonMultipleNumbers(i, n);
         System.out.printf("Task 4. Numbers not multiple of %d from %d to %d are: ", n, Short.MIN_VALUE, i);
         for (int j = 0; j<m2.length; j++){
             if (j == m2.length-1) System.out.printf("%d.\n", m2[j]);
             else if (j < 3 || j > m2.length-4) System.out.printf("%d ", m2[j]);
             else if (j == 3) System.out.print(" ... ");
         }
-
-
     }
 
     private static int randomNumber(int min, int max){
@@ -41,7 +39,7 @@ public class S1 {
         return binaryI.length();
     }
 
-    private  static int[] multiplesNumbers(int i, int n){
+    private  static int[] multipleNumbers(int i, int n){
         int[] result = new int[0];
         for (int j = i; j < Short.MAX_VALUE; j++){
             if (j % n == 0) result = addElementToArray(j, result);
@@ -49,7 +47,7 @@ public class S1 {
         return result;
     }
 
-    private  static int[] nonMultiplesNumbers(int i, int n){
+    private  static int[] nonMultipleNumbers(int i, int n){
         int[] result = new int[0];
         for (int j = Short.MIN_VALUE; j < i; j++){
             if (j % n != 0) result = addElementToArray(j, result);
@@ -63,6 +61,4 @@ public class S1 {
         new_array[new_array.length-1] = element;
         return new_array;
     }
-
-
 }
