@@ -7,14 +7,14 @@ public class S1 {
         int min = 0;
         int max = 2000;
 
-        int i = rand(min, max);
+        int i = randomNumber(min, max);
         System.out.printf("Task 1. Random number from 0 to 2000 i = %d\n", i);
 
-        int n = highBit(i);
+        int n = mostSignificantBit(i);
         System.out.printf("Task 2. MSB - n = %d\n", n);
 
         int[] m1 = multiplesNumbers(i, n);
-        System.out.printf("Task 3. Numbers multiples of %d from %d to %d are: ", n, i, Short.MAX_VALUE);
+        System.out.printf("Task 3. Numbers multiple of %d from %d to %d are: ", n, i, Short.MAX_VALUE);
         for (int j = 0; j<m1.length; j++){
             if (j == m1.length-1) System.out.printf("%d.\n", m1[j]);
             else if (j < 3 || j > m1.length-4) System.out.printf("%d ", m1[j]);
@@ -22,7 +22,7 @@ public class S1 {
         }
 
         int[] m2 = nonMultiplesNumbers(i, n);
-        System.out.printf("Task 4. Numbers non-multiples %d from %d to %d are: ", n, Short.MIN_VALUE, i);
+        System.out.printf("Task 4. Numbers not multiple of %d from %d to %d are: ", n, Short.MIN_VALUE, i);
         for (int j = 0; j<m2.length; j++){
             if (j == m2.length-1) System.out.printf("%d.\n", m2[j]);
             else if (j < 3 || j > m2.length-4) System.out.printf("%d ", m2[j]);
@@ -32,11 +32,11 @@ public class S1 {
 
     }
 
-    private static int rand(int min, int max){
+    private static int randomNumber(int min, int max){
         return new Random().nextInt(min, max);
     }
 
-    private static int highBit (int i){
+    private static int mostSignificantBit(int i){
         String binaryI = Integer.toBinaryString(i);
         return binaryI.length();
     }
