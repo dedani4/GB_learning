@@ -8,10 +8,10 @@ public class S1 {
         int max = 2000;
 
         int i = randomNumber(min, max);
-        System.out.printf("Task 1. Random number from 0 to 2000 i = %d\n", i);
+        System.out.printf("Task 1. Random number from 0 to 2000 is i = %d\n", i);
 
         int n = mostSignificantBit(i);
-        System.out.printf("Task 2. MSB - n = %d\n", n);
+        System.out.printf("Task 2. MSB is n = %d\n", n);
 
         int[] m1 = multipleNumbers(i, n);
         System.out.printf("Task 3. Numbers multiple of %d from %d to %d are: ", n, i, Short.MAX_VALUE);
