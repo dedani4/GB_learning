@@ -38,9 +38,11 @@ public class S2 {
             return false;
         }
     }
+    
     private static long exponentNumber(int[] numbers){
         return (long)Math.pow(numbers[0],numbers[1]);
     }
+    
     private static void task2(String str, String toReplace, String replacement, int start, int end){
         replaceString(str, toReplace, replacement);
         replaceStringBuilder(str, start, end, replacement);
@@ -55,6 +57,7 @@ public class S2 {
         System.out.println(finish);
         System.out.printf("Replace of class String duration is: %d\n\n", finish - begin);
     }
+    
     private static void replaceStringBuilder(String str, int start, int end, String replacement){
         long begin = System.currentTimeMillis();
         System.out.println(begin);
