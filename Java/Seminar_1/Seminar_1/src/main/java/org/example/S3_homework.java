@@ -6,9 +6,9 @@ public class S3_homework {
 
     public static void main(String[] args) {
         task1Int(randomIntList(0, 50, 10));
-        task1Str(randomStrList(5, 10));
-        task2(randomIntList(5,55,10));
-        task3(randomIntList(1,10,10));
+        task1Str(randomStrList(4, 5));
+        task2(randomIntList(0,50,10));
+        task3(randomIntList(0,10,10));
         task4(randomIntList(0,10,5), randomIntList(0,10,5));
         task7(task5(),task6());
     }
@@ -71,22 +71,20 @@ public class S3_homework {
     }
 
     private static long task5(){
-        System.out.println("Task 5:");
         ArrayList<Integer> list = new ArrayList<>();
         long start = System.currentTimeMillis();
         for (int i = 0; i<10000; i++) list.add(0,0);
         long end = System.currentTimeMillis();
-        System.out.println(list);
+        System.out.printf("Task 5: [%d...%d]\n",list.get(0), list.get(list.size()-1) );
         return end-start;
     }
 
     private static long task6(){
-        System.out.println("Task 6:");
         LinkedList<Integer> list = new LinkedList<>();
         long start = System.currentTimeMillis();
         for (int i = 0; i<10000; i++) list.add(0,0);
         long end = System.currentTimeMillis();
-        System.out.println(list);
+        System.out.printf("Task 6: [%d...%d]\n",list.get(0), list.get(list.size()-1) );
         return end-start;
     }
 
