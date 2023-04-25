@@ -32,11 +32,11 @@ public class S3_homework {
         }
         return list;
     }
-    private static void task1Int (List<Integer> list1){
+    private static void task1Int (List<Integer> list){
         System.out.println("Task 1 Integer:");
-        System.out.println(list1);
-        list1.sort((integer, t1) -> t1 - integer);
-        System.out.println(list1);
+        System.out.println(list);
+        list.sort((integer, t1) -> t1 - integer);
+        System.out.println(list);
     }
     private static void task1Str (List<String> list){
         System.out.println("Task 1 String:");
@@ -74,9 +74,7 @@ public class S3_homework {
         System.out.println("Task 5:");
         ArrayList<Integer> list = new ArrayList<>();
         long start = System.currentTimeMillis();
-        for (int i = 0; i<10000; i++){
-            list.add(0,0);
-        }
+        for (int i = 0; i<10000; i++) list.add(0,0);
         long end = System.currentTimeMillis();
         System.out.println(list);
         return end-start;
@@ -86,9 +84,7 @@ public class S3_homework {
         System.out.println("Task 6:");
         LinkedList<Integer> list = new LinkedList<>();
         long start = System.currentTimeMillis();
-        for (int i = 0; i<10000; i++){
-            list.add(0,0);
-        }
+        for (int i = 0; i<10000; i++) list.add(0,0);
         long end = System.currentTimeMillis();
         System.out.println(list);
         return end-start;
