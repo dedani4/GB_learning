@@ -73,7 +73,7 @@ public class S3_homework {
     private static long task5(){
         ArrayList<Integer> list = new ArrayList<>();
         long start = System.currentTimeMillis();
-        for (int i = 0; i<10000; i++) list.add(0,0);
+        for (int i = 0; i<100000; i++) list.add(0,0);
         long end = System.currentTimeMillis();
         System.out.printf("Task 5: [%d...%d]\n",list.get(0), list.get(list.size()-1) );
         return end-start;
@@ -82,7 +82,7 @@ public class S3_homework {
     private static long task6(){
         LinkedList<Integer> list = new LinkedList<>();
         long start = System.currentTimeMillis();
-        for (int i = 0; i<10000; i++) list.add(0,0);
+        for (int i = 0; i<100000; i++) list.add(0,0);
         long end = System.currentTimeMillis();
         System.out.printf("Task 6: [%d...%d]\n",list.get(0), list.get(list.size()-1) );
         return end-start;
