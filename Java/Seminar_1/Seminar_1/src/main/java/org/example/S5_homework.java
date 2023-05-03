@@ -28,7 +28,13 @@ public class S5_homework {
         map2.put("ccc", "Muhamed");
         map2.put("sss", "Ali");
 //        Объеденить значания во втором множестве и первом если ключи совподают.
-        map2.putAll(map1);
+        for(String key2: map2.keySet()){
+            for(String key1: map1.keySet()){
+                if (key2.equals(key1)){
+                    map2.merge(key2, map1.get(key1), String::concat);
+                }
+            }
+        }
 //        Вывести результат в консоль.
         System.out.println(map2);
 
